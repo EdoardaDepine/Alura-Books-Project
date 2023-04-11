@@ -4,8 +4,8 @@ async function buscarLivrosAPI() {
     "https://guilhermeonrails.github.io/casadocodigo/livros.json"
   );
   livros = await resposta.json();
-  console.table(livros);
-  mostrarLivros(livros);
+  let livrosComDesconto = aplicarDesconto(livros);
+  mostrarLivros(livrosComDesconto);
 }
 
 buscarLivrosAPI();
