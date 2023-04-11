@@ -1,6 +1,7 @@
 const inserirLivrosIndex = document.querySelector("#livros");
 
 function mostrarLivros(arrayLivros) {
+  inserirLivrosIndex.innerHTML = "";
   arrayLivros.forEach((livro) => {
     inserirLivrosIndex.innerHTML += `
     <div class="livro">
